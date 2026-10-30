@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './styles/index.css';
+import { useState } from 'react';
+import './index.css';
 import { useFinancial } from './hooks/useFinancial';
 import { Dashboard } from './components/Dashboard';
 import { IncomeSection } from './components/IncomeSection';
