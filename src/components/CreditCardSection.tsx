@@ -1,5 +1,4 @@
-import React from 'react';
-import { CreditCard } from '../types';
+import type { CreditCard } from '../types';
 import { CreditCardList } from './CreditCardList';
 
 interface CreditCardSectionProps {

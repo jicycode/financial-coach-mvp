@@ -1,5 +1,4 @@
-import React from 'react';
-import { FinancialStatus, FinancialData } from '../types';
+import type { FinancialStatus, FinancialData } from '../types';
 import { StatBox } from './StatBox';
 import { TransactionList } from './TransactionList';
 import { GoalCard } from './GoalCard';
@@ -39,7 +38,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ status, data, onUpdateGoal
 
       {/* Goals Section */}
       <div style={{ marginBottom: '30px' }}>
-        <h2 style={{ fontSize: '1.3rem', marginBottom: '20px', borderBottom: '2px solid #6366f1', paddingBottom: '10px' }}>
+        <h2 style={{ fontSize: '1.3rem', marginBottom: '20px', borderBottom: '2px solid #244C3C', paddingBottom: '10px' }}>
           🎯 Metas de Ahorro
         </h2>
         <div className="grid grid-3">

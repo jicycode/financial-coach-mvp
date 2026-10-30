@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { FinancialData, FinancialStatus, Transaction } from '../types';
+import type { FinancialData, FinancialStatus, Transaction } from '../types';
 import { FinancialService } from '../services/financialService';
 
 export function useFinancial() {

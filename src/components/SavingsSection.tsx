@@ -1,5 +1,4 @@
-import React from 'react';
-import { FinancialData } from '../types';
+import type { FinancialData } from '../types';
 import { GoalCard } from './GoalCard';
 
 interface SavingsSectionProps {

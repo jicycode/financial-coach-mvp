@@ -1,5 +1,4 @@
-import React from 'react';
-import { Reward } from '../types';
+import type { Reward } from '../types';
 
 interface RewardBadgeProps {
   reward: Reward;

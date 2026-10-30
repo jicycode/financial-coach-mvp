@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Transaction } from '../types';
+import { useState } from 'react';
+import type { Transaction } from '../types';
 import { TransactionList } from './TransactionList';
 
 interface ExpensesSectionProps {

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FinancialGoal } from '../types';
+import { useState } from 'react';
+import type { FinancialGoal } from '../types';
 
 interface GoalCardProps {
   goal: FinancialGoal;
@@ -32,8 +32,8 @@ export const GoalCard: React.FC<GoalCardProps> = ({ goal, onUpdateGoal }) => {
           style={{
             width: `${Math.min(percentage, 100)}%`,
             background: isCompleted
-              ? 'linear-gradient(90deg, #10b981, #059669)'
-              : 'linear-gradient(90deg, #6366f1, #ec4899)'
+              ? 'linear-gradient(90deg, #A8C5A0, #8FB596)'
+              : 'linear-gradient(90deg, #A8C5A0, #244C3C)'
           }}
         ></div>
       </div>
@@ -52,11 +52,11 @@ export const GoalCard: React.FC<GoalCardProps> = ({ goal, onUpdateGoal }) => {
                 type="number"
                 value={newAmount}
                 onChange={(e) => setNewAmount(parseFloat(e.target.value))}
-                style={{ padding: '8px', border: '1px solid #e5e7eb', borderRadius: '6px' }}
+                style={{ padding: '8px', border: '1px solid #D4C7D8', borderRadius: '6px' }}
               />
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
                 <button className="btn btn-success btn-sm" onClick={handleSave}>Guardar</button>
-                <button className="btn btn-sm" style={{ background: '#e5e7eb', color: '#333' }} onClick={() => setIsEditing(false)}>Cancelar</button>
+                <button className="btn btn-sm" style={{ background: '#D4C7D8', color: '#333' }} onClick={() => setIsEditing(false)}>Cancelar</button>
               </div>
             </>
           ) : (

@@ -1,4 +1,4 @@
-import { FinancialData, FinancialStatus, Transaction, CreditCard, FinancialGoal, Reward } from '../types';
+import type { FinancialData, FinancialStatus, Transaction, CreditCard, FinancialGoal, Reward } from '../types';
 
 const STORAGE_KEY = 'financial_coach_data';
 
@@ -215,18 +215,16 @@ export class FinancialService {
     if (goal) {
       goal.currentAmount = currentAmount;
 
-      // Check if goal is reached and unlock reward
       if (currentAmount >= goal.targetAmount) {
         const rewardIndex = Math.floor(Math.random() * REWARDS_LIBRARY.length);
-        const reward = {
-          ...REWARDS_LIBRARY[rewardIndex],
-          id: `${reward.id}-${Date.now()}`,
+        const baseReward = REWARDS_LIBRARY[rewardIndex];
+        const reward: Reward = {
+          ...baseReward,
+          id: `${baseReward.id}-${Date.now()}`,
           unlockedAt: new Date().toISOString(),
         };
 
-        if (!data.unlockedRewards.some(r => r.id === reward.id)) {
-          data.unlockedRewards.push(reward);
-        }
+        data.unlockedRewards.push(reward);
       }
 
       this.saveData(data);
